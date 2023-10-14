@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import Home from './components/Home';
 import About from './components/About';
 import Experience from './components/Experience';
@@ -27,8 +29,8 @@ class App extends Component {
         <div>
           {/* Header */}
           <header style={headerStyle}>
-          <h1>Walcome</h1>
-            <h2>My Portofolio</h2>
+            <h1>WELCOME</h1>
+            <h2>MY PORTFOLIO</h2>
             <nav>
               <ul style={navListStyle}>
                 <li style={navListItemStyle}>
@@ -100,6 +102,14 @@ class App extends Component {
               <Route path="/awards" element={<Awards />} />
             </Routes>
           </div>
+
+          {/* Footer */}
+          <footer style={footerStyle}>
+            <p>&copy; 2023 My Portfolio. Achmad Raka Anugrah.</p>
+            <a href="https://github.com/AchmadRakaAnugrah" target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={faGithub} style={githubIconStyle} />
+            </a>
+          </footer>
         </div>
       </Router>
     );
@@ -119,12 +129,12 @@ const navListStyle = {
   padding: 0,
   display: 'flex',
   justifyContent: 'center',
-  gap: '15px', // Sesuaikan jarak yang diinginkan
-  flexWrap: 'wrap', // Menangani wrap elemen pada layar kecil
+  gap: '15px',
+  flexWrap: 'wrap',
 };
 
 const navListItemStyle = {
-  marginRight: '15px', // Sesuaikan jarak yang diinginkan
+  marginRight: '15px',
 };
 
 const navLinkStyle = {
@@ -133,12 +143,26 @@ const navLinkStyle = {
 };
 
 const activeLinkStyle = {
-  color: '#ffcc00', // Warna teks untuk menu yang aktif
+  color: '#ffcc00',
   textDecoration: 'none',
 };
 
 const contentStyle = {
   marginTop: '20px',
+};
+
+const footerStyle = {
+  backgroundColor: '#333',
+  color: '#fff',
+  padding: '1rem',
+  textAlign: 'center',
+  marginTop: '20px',
+};
+
+const githubIconStyle = {
+  fontSize: '24px',
+  color: '#fff',
+  marginLeft: '10px',
 };
 
 export default App;

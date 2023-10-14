@@ -42,7 +42,7 @@ const interestItem = {
 };
 
 const imageStyle = {
-  width: '100%',
+  width: '50%',
   height: 'auto',
   borderRadius: '10px',
 };

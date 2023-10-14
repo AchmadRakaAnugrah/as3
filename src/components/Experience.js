@@ -6,27 +6,27 @@ import BoostrapImage from '../Boostrap.png';
 class Experience extends Component {
   render() {
     const interests = [
-      { name: 'Coding', image: SvelteImage, description: 'Passionate about writing clean and efficient code.' },
-      { name: 'Travel', image: ReactImage, description: 'Love exploring new places and experiencing different cultures.' },
-      { name: 'Cooking', image: BoostrapImage, description: 'Enjoy experimenting with ingredients and creating delicious meals.' },
-      // Add more interests as needed
-    ];
+    { name: 'Svelte', image: SvelteImage, description: ' I m learning Svelte and have created a few small projects. Even though I m still a beginner, I m impressed with the development speed that Svelte provides.' },
+    { name: 'React', image: ReactImage, description: 'Currently, I am learning React and have succeeded in creating simple components. Even though I am still a beginner, I am enthusiastic about continuing to explore React.' },
+    { name: 'Boostrap', image: BoostrapImage, description: 'I m just learning Bootstrap and have been using its components to create responsive layouts. Although still a beginner, I enjoy Bootstrapcs simplicity in user interface development.' },
+    // Add more interests as needed
+  ];
 
-    return (
-      <div>
-        <h2>Experience</h2>
+  return (
+    <div>
+      <h2>Experience</h2>
 
-        <div style={interestContainer}>
-          {interests.map((interest, index) => (
-            <div key={index} style={interestItem}>
-              <img src={interest.image} alt={interest.name} style={imageStyle} />
-              <h3>{interest.name}</h3>
-              <p>{interest.description}</p>
-            </div>
-          ))}
-        </div>
+      <div style={interestContainer}>
+        {interests.map((interest, index) => (
+          <div key={index} style={interestItem}>
+            <img src={interest.image} alt={interest.name} style={imageStyle} />
+            <h3>{interest.name}</h3>
+            <p style={textJustify}>{interest.description}</p>
+          </div>
+        ))}
       </div>
-    );
+    </div>
+  );
   }
 }
 
@@ -47,6 +47,10 @@ const imageStyle = {
   width: '100%',
   height: 'auto',
   borderRadius: '10px',
+};
+
+const textJustify = {
+  textAlign: 'justify',
 };
 
 export default Experience;
